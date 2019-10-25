@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="css\style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=0.9">
+    <title>task2-documents</title>
+</head>
+<body>
+    <div class="block">
+        <div class="grid">
+            <a href="#modal">
+                <div class="load" data-target="#modal">
+                    <!--<img src="img\upload.svg" width="40px" height="40px" alt="">-->
+                </div>
+            </a>
+            <div class="link">
+                <a href="#modal">Загрузить скан страницы с фотографией</a>
+                <p>Размер файла не более 5Мб</p>
+            </div>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal_back">
+        <div class="modal_win">
+            <input class="input" id="take" type="text" value="Скан документа">
+            <input class="btn_1" type="button" value="Подтвердить " onclick="input_name_file()">
+            <input class="btn_choose" id="fileInput" type="button" value="Выберите файл" onclick="document.getElementById('getFile').click()">
+            <input type="file" id="getFile" accept="image/*" onchange="name_file(this.files)">
+            <a href="#close"><input class="btn_2" type="button" value="Загрузить" onclick="addBlock()"></a>
+            <a href="#close"><input class="btn_3" type="button" id="close" value="Закрыть"></a>
+        </div>
+    </div>
+    <script async src="js/javasc.js"></script>
+</body>
+</html>

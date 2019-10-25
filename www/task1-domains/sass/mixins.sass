@@ -1,0 +1,73 @@
+@mixin p($color)
+    font-weight: 500
+    font-family: Montserrat, sans-serif
+    color: $color
+@mixin wrapper
+    .wrapper
+        display: grid
+        grid-template-columns: repeat(12, minmax(60px, 80px))
+        grid-column-gap: 12px
+        justify-content: center
+        white-space: nowrap
+        height: 970px
+        .grid
+            border: $border
+            padding-top: 30px
+        @media (max-width: 850px)
+            grid-column-gap: 9px
+@media (max-width: 820px)
+    .wrapper
+        display: grid
+        grid-template-columns: repeat(12, minmax(28px, 68px))
+        justify-content: center
+        white-space: nowrap
+        height: 970px
+@mixin logo($filter)
+    .logo
+        border: $border_2
+        width: 168px
+        img
+            filter: $filter
+        div
+            margin-left: 72px
+            margin-top: -21px
+@mixin btn($margin-top)
+    .btn_1
+        margin-top: $margin-top
+        text-align: center
+        width: 352px
+        border: $border_2
+        position: absolute
+        left: 50%
+        transform: translate(-50%, 0%)
+        button
+            text-align: center
+            background: #61b818
+            width: 276px
+            height: 60px
+            border: none
+            border-radius: 10px
+            outline: none
+            a
+                color: white
+                text-decoration: none
+                font-size: 25px
+                font-weight: 600
+    .btn_1:hover
+        opacity: 0.9
+    .btn_1:active
+        button
+            background: #489805
+@mixin text($font-sz, $mar-top)
+    position: absolute
+    text-align: center
+    font-size: $font-sz
+    margin-top: $mar-top
+    left: 50%
+    transform: translate(-50%, 0%)
+
+@mixin wrapper_text($min, $max)
+        display: grid
+        grid-template-columns: minmax($min, $max)
+        position: absolute
+

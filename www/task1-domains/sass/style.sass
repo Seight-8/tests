@@ -1,0 +1,257 @@
+@import "variables"
+@import "mixins"
+*
+    padding: 0
+    margin: 0
+.circle
+    border: $border_2
+    width: 50px
+    height: 100px
+    padding: 20px
+    padding-right: 10px
+    position: absolute
+    right: 0%
+    margin-top: 485px
+    transform: translate(0%, -50%)
+    z-index: 8
+    div
+        margin: 20px
+        width: 10px
+        height: 10px
+        border-radius: 10px
+        background: white
+        border: 1px solid black
+        cursor: pointer
+    .circle_activ
+        background: black
+        border: 1px solid white
+        transition: all .5s ease
+#list
+    display: none
+#list:first-child
+    display: block
+.block_1
+    background: url(../img/background1.jpg) no-repeat
+    background-position: center bottom
+    @include p(white)
+    @include wrapper
+    @include logo(invert(1))
+    .form
+        position: absolute
+        left: 50%
+        transform: translate(-50%, 0%)
+    .backg
+        position: relative
+        margin-top: -50px
+        width: 720px
+        height: 90px
+        border: $border_2
+        background: #333333
+        opacity: 0.7
+        z-index: 1
+        border-radius: 10px
+        p
+            position: absolute
+            top: 80%
+            left: 50%
+            margin-right: -50%
+            transform: translate(-50%, -80%)
+            a
+                color: #61b818
+    .input
+        position: relative
+        margin-top: 370px
+        width: 660px
+        border: $border_2
+        z-index: 2
+        border-radius: 10px
+        padding: 30px
+        font-size: 25px
+        outline: none
+    .btn_2
+        position: relative
+        z-index: 3
+        font-size: 25px
+        padding: 15px
+        border-radius: 10px
+        background: #5f6062
+        border: none
+        color: white
+        margin-left: -175px
+        outline: none
+    .btn_2:hover
+        opacity: 0.9
+    .btn_2:active
+        background: #333
+    .top
+        @include text(14px, 0px)
+    .title
+        @include text(81px, 120px)
+    @include btn(550px)
+    .down
+        margin-top: 770px
+        border: $border_2
+        width: 168px
+        height: 168px
+        position: absolute
+        img
+            position: absolute
+            top: 50%
+            left: 50%
+            margin-right: -50%
+            transform: translate(-50%, -50%)
+    .test
+        position: absolute
+        display: grid
+        grid-template-columns: minmax(56px, 86px)
+        border: $border_2
+        margin-left: 0px
+        div
+            width: 100px
+            height: 100px
+            border: $border_2
+.block_2
+    @include p(black)
+    @include wrapper
+    @include logo(hue-rotate(180deg))
+    @include btn(788px)
+    .links
+        width: 1088px
+        padding-top: 30px
+        border: $border_2
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        .link
+            text-align: center
+            font-size: 19px
+            border: $border_2
+            cursor: pointer
+    .activ
+        div
+            width: 0px
+            height: 0px
+            position: relative
+            bottom: -3px
+            left: 50%
+            transform: translate(-50%, 0)
+            z-index: 5
+            border-left: 15px solid transparent
+            border-right: 15px solid transparent
+            border-bottom: 15px solid #bdbdbe
+        .border
+            width: 0px
+            height: 0px
+            position: relative
+            left: 50%
+            bottom: -20px
+            transform: translate(-50%, 0)
+            z-index: 6
+            border-left: 16px solid transparent
+            border-right: 16px solid transparent
+            border-bottom: 16px solid #f7f7f7
+    .contents
+        width: 1090px
+        .content
+            margin-bottom: 10px
+            padding: 20px 30px
+            border: 1px solid #bdbdbe
+            border-radius: 10px
+            background: #f7f7f7
+            text-align: left
+            font-size: 15px
+            display: none
+            z-index: 1
+    .logo
+        margin-bottom: 200px
+    .top_middle
+        @include text(30px, 80px)
+.block_3
+    @include p(white)
+    background: url(../img/background2.jpg) no-repeat
+    background-position: center bottom
+    @include wrapper
+    @include logo(invert(1))
+    @include btn(510px)
+    .copyright, .copyright_min1, .copyright_min2
+        @include text(13px, 838px)
+        color: #bad1f1
+        a
+            color: #bad1f1
+    @media (max-width: 1054px)
+        .copyright
+            display: none
+    @media (min-width: 1055px)
+        .copyright_min1
+            display: none
+    @media (max-width: 907px)
+        .copyright_min1
+            display: none
+    @media (min-width: 908px)
+        .copyright_min2
+            display: none
+    .red_box
+        display: grid
+        grid-template-columns: minmax(660px, 821px) minmax(93px, 207px)
+        position: absolute
+        padding: 30px
+        background: #f2385a
+        border-radius: 10px
+        margin-top: 640px
+        font-size: 20px
+        border: $border_2
+        line-height: 30px
+        div:not(.h100)
+            border: $border_2
+            line-height: 30px
+        a
+            color: white
+        .h100
+            text-align: center
+            margin-left: 0px
+            font-size: 50px
+            border: $border_2
+            letter-spacing: 6px
+            .line
+                border-left: 2px solid #f6667d
+                height: 80px
+                width: 1px
+                position: absolute
+                margin-top: -10px
+                margin-left: -20px
+            div:not(.line)
+                position: relative
+                top: 50%
+                transform: translate(0%, -50%)
+                img
+                    filter: invert(1)
+    .red_box_min
+        display: none
+    @media (max-width: 989px)
+        .red_box
+            font-size: 18px
+            .h100
+                div
+                    margin-left: -20px
+                .line
+                    margin-left: -40px
+    @media (max-width: 894px)
+        .red_box
+            p:not(.min_p)
+                display: none
+            .h100
+                div
+                    margin-left: -60px
+                .line
+                    margin-left: -80px
+                    height: 110px
+    @media (min-width: 895px)
+        .red_box
+            .min_p
+                display: none
+    .top_bot1
+        @include text(30px, 80px)
+    .top_bot2
+        @include text(48px, 190px)
+    @media (max-width: 877px)
+        .top_bot2
+            font-size: 38px
